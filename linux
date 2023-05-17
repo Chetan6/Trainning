@@ -1,0 +1,566 @@
+BASIC COMMANDS OF LINUX
+--------------------------------------------------------------------------------------------------------
+
+linux is an open source os.
+
+cmds-
+------------------------------------------------------------------------------------------------
+
+(1)   ls-    used to list files and directories the content of your current working directory. 
+
+      ls -R  ->  list all the files in subdirectories.
+      ls -a  ->  show hidden files in addition to visible ones.
+      ls -lh ->  show the file size in easily readable formats such as mb ,gb and tb.
+
+
+      ex-   $ ls
+            o/p ->  download       desktop    me 
+                    document       bin
+.....................................................................................
+
+
+                         unix-> it,s foundation of linux .
+                         ubuntu-> ubuntu is distribution of linux.
+
+
+                         there are two types of interfaces    (1)-    cli [command line interface]      (2)-    gui  [graphical user interface]
+
+
+                          =  window focused on gui and linux focus on cli.
+
+
+................................................................................
+
+(2)    pwd-       (print working directory)
+                  pwd is used to display location of current working directory.
+ 
+       ex-             $ pwd
+                      o/p-> /home/beryl  
+................................................................................
+
+
+ (3)   cd -       change directory 
+
+
+              cd <folder_name>
+     ex-
+                ~$ cd chetan 
+                o/p-> /home/beryl/chetan~$
+
+           *     ~$ cd /
+                  o/p ->  /$ root folder   
+
+           *      ~$ cd ..                            (/home/beryl/download)
+                  o/p-> back folder                   (/home/beryl)
+
+....................................................................................
+
+(4)    mkdir - it,s used to create new directory under any directory 
+             
+
+               mkdir <directory_name>
+       ex-   
+               ~$ mkdir hlw
+               o/p->     
+
+             (ls)-  document   downloads  hlw
+                      create hlw directory 
+
+...................................................................................
+
+(5)    rmdir - it is used to delete directory.
+
+
+            rmdir <directory_name>
+    ex-       
+           ~$rmdir  hlw
+            o/p->   
+
+             (ls) -document   download
+              hlw directory will delete
+
+....................................................................................                                     
+
+(6)     touch command-   touch command is used to create empty file and we can create multiple empty files using once.
+
+
+             touch <file>
+             touch <file> <file>...
+ex-
+           ~$ touch  demo.txt  test.txt  hlw.txt
+            o/p->   
+                     (ls)    demo.txt   test.txt   hlw.txt
+
+
+..........................................................................................................
+
+(7)       cat command-  cat command is used to show file content on terminal.
+
+
+             cat <file_name>
+
+ex-         ~$ cat demo.txt
+
+             o/p - content of demo.txt will be open on terminal. 
+
+
+..........................................................................................................
+
+(8)        rm command-    rm command is used to remove a file.
+
+                  
+                 rm <file>
+                 rm <file> <file> ....
+
+ex-             ~$  test.txt   hlw.txt  demo.txt 
+
+                ~$ rm demo.txt
+             
+      o/p->  
+                      (ls)      test.txt   hlw.txt
+
+..........................................................................................................
+
+(9)         cp command -   cp command is used to copy a file or directory.
+
+             
+                  cp <existing_file> <new_file>/
+
+ex-                ~$ demo1.txt  demo2.txt  demo3.txt
+
+                   ~$ cp demo1.txt chetan/
+
+        o/p->            chetan/demo1.txt
+                           demo1.txt will copy inside chetan folder also
+
+
+........................................................................................................
+
+
+(10)         mv command -   mv command is used to move a file or a directory from one location to another location.
+
+
+               mv  <file>  <dir_path>
+
+ex-             ~$ mv demo.txt how
+                 o/p-> 
+                           (ls)- how/demo.txt
+                            demo.txt will move in how folder or dir.
+
+........................................................................................................
+
+(11)         rename command -    rename command is used to rename files.It is useful for renaming a large group of files.
+
+                or       Rename a file.
+
+                 
+                 mv <old_file> <new_file>
+
+ex-             ~$ mv bye.txt love.txt            //bye.txt          
+                   o/p-> love.txt
+
+................................................................................................................
+(18)         id command -  id command is used to display user id (UID) and group id(GID).
+
+
+              ~$ id 
+
+               o/p->   display user id and group id 
+
+............................................................................................................
+(37)        date command -   date command is used to display date, time, time zone, and more.
+
+
+                   
+  ex-           ~$ date 
+                   o/p->   tue may 9 12:29:52 IST 2023
+                           current day month date time and timezone 
+...........................................................................................................
+
+(38)       cal Command-         cal command is used to display the current month's calendar with the current date highlighted.
+
+
+   ex-           ~$ cal 
+                 o/p -      calender with current date and day.
+
+
+.................................................................................................................
+(39)       sleep command-      sleep command is used to hold the terminal by specific ammount of time .bydefault it takes time in second.
+
+
+           sleep <time>
+
+ex-            ~$ sleep 4
+            o/p-    terminal will hold till 4 seconds.
+
+
+..............................................................................................................................
+
+          help- shows you basic commands and there use .
+
+           <cmd> -h
+
+ ex-    
+           ~$ ls -h
+             o/p->   everything about ls or help will open.
+.............................................................................................................                    
+
+
+*     man command-  it shows complete manual of any command or program.
+
+
+               man <cmd>
+
+   ex-              ~$ man ls 
+                          o/p-      complete manual about ls command will be open.
+
+...............................................................................................................
+
+ * clear command-   it is used to clear terminal.
+
+      
+               ~$ clear
+
+..............................................................................................................
+
+*   vim command- Vim command is used text editor for  Linux file.
+
+             
+         vim <file_name>
+
+ex-         ~$ vim demo.txt
+
+              press "i"  to insert text
+
+              //whatever you want to write. you can write here.
+
+
+                press "esc" to stop insertion of text.
+
+                 :(q or wq)   and "enter"
+
+                  q-> quit without save.
+                  wq-> quit with save file.
+
+................................................................................................................
+
+      sudo su -   grant root privilages.
+
+  two ways to access admin or root user
+                      (1)->     su- it is used to make terminal root user or admin.
+                      (2)->     or we can use sudo before command.  
+
+         ~$ sudo su
+                 --> password
+
+           o/p-> # root user
+
+................................................................................................................
+
+
+       cat-       shows content of a file.     
+
+
+             cat <file_name>
+
+ex-           ~$ cat hello.txt
+
+                  o/p->  written content of "hello.txt" file will be show on terminal.    
+
+................................................................................................................
+
+
+       nano-      linux file editor.
+
+
+                 nano <file_name>
+
+ex-             ~$ nano hello.txt
+
+                 o/p->    content will be open of "hello.txt" file and we may make changes or edit in file through terminal.
+                              
+
+................................................................................................................
+
+      gedit -     file editor software
+
+
+            gedit <file_name>
+
+ex->            
+                     ~$ gedit hello.txt
+
+               o/p->   "hello.txt" file will be open in (graphical user interface) or file format and we can edit.
+
+                         @if file is not exist in folder than it will be created.
+
+................................................................................................................
+
+      chmod -     change directory permission.
+
+
+       permission-
+
+              read     -r                   (+)  add permission
+              write    -w                   (-)  remove permission 
+              execute  -x
+
+
+               press :   ~$ ls -l      --> to see detailed information of a file.
+          
+                chmod  permission(r or w or x)  <file>
+
+ex-         ~$ chmod -w bye.txt                      //remove the permission of write from file "bye.txt"
+
+             ~$ chmod -wx bye.txt                    //remove the permission of write and excute from file "bye.txt"
+
+                -->must be in user more not root mode.
+
+................................................................................................................
+
+     head - top 10 line of file.
+
+       head <file>
+
+ex-     ~$ head bye.txt 
+            o/p->   top 10 line of "bye.txt" will be print.
+
+................................................................................................................
+
+    tail -bottom 10 line of file.
+
+
+       tail <file>
+
+ex-     ~$ tail bye.txt 
+            o/p-> bottom 10 line of "bye" file will be print.
+
+...............................................................................................................
+
+
+   ./  -  execute shell file.
+
+         ./<file_name>
+
+ex-        
+           ~$ ./bye.txt                                         //bye.txt -->   echo "beryl system pvt ltd"
+              o/p-> beryl system pvt ltd 
+
+...............................................................................................................
+
+   bash command -   execute shell program.
+
+
+         bash <file_name>
+                                                                //bye.txt -->   echo "beryl system pvt ltd"
+ex-        ~$ bash bye.txt 
+              o/p-> beryl system pvt ltd
+
+...............................................................................................................
+
+     apt-get update --->  update packages list(URL's).
+
+
+ex-         ~$ sudo su                             //to be make root user or admin terminal.
+            ~$ apt-get update
+
+         or 
+
+             ~$ sudo apt update                    //only this line will act as a root user or admin.
+
+              o/p-> update kind of playstore......
+
+...............................................................................................................
+
+    apt-get upgrade --->  update all installed softwares.
+
+
+ex-         ~$ sudo su                             //to be make root user or admin terminal.
+            ~$ apt-get upgrade
+
+         or 
+
+             ~$ sudo apt upgrade                    //only this line will act as a root user or admin.
+
+              o/p-> update all installed software..........
+
+...............................................................................................................
+
+     apt-get install gedit ---> install a particular software.
+
+
+              apt install <software>
+
+
+ex-         ~$ sudo su                             //to be make root user or admin terminal.
+            ~$ apt install gedit
+
+         or 
+
+             ~$ sudo apt install gedit                    //only this line will act as a root user or admin.
+
+              o/p-> a particular software will be install.
+
+...............................................................................................................
+
+   top-   showing linux processes.   or    Display all running processes.
+
+
+ ex-        ~$ top
+
+           o/p->  all running process will be display. 
+
+           exit------>  ctrl+c     
+
+..............................................................................................................
+
+   kill-   Terminate processes manually.      or      Kill a specific process using process ID
+
+
+       kill <pid>
+
+ex-           ~$ kill 120
+
+           o/p->  this process will be terminate. 
+
+
+
+-----------------------------***************************************************************------------------
+
+   killall <processname> - kill all processes by names.
+
+      
+
+..............................................................................................................
+
+   w -     who is logged on and what they are doing.
+
+            or     display all login name.
+
+ex-            ~$ w
+
+               o/p->  
+14:50:43 up  1:02,  1 user,  load average: 0.55, 0.29, 0.21
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+beryl    :0       :0               13:48   ?xdm?   2:10   0.01s /usr/lib/gdm3/gdm-x-session --run-scr
+           
+
+  kon open h , or kb open hua,kya krrha h.
+
+..............................................................................................................
+
+  whoami-  display the user name and current user.
+
+
+ex-              ~$ whoami
+                    o/p->  root                                         //kon sa user active h 
+
+.............................................................................................................
+
+
+  hostnamectl -  get system information including (os ,kernel and release version).
+
+
+ ex-            ~$ hostnamectl
+                   o/p-> 
+
+         Static hostname: beryl-Latitude-7490chetan
+         Icon name: computer-laptop
+         Chassis: laptop
+         Machine ID: 41f28ba9710a4d0d86b829a10718a0f2
+         Boot ID: 474eb8be10a641068bbc8a0a18ed596f
+         Operating System: Ubuntu 18.04.6 LTS
+         Kernel: Linux 5.4.0-148-generic
+         Architecture: x86-64
+         
+.............................................................................................................
+
+hostname -  used to display hostname of system.
+
+
+ ex-            ~$ hostname
+                   o/p->  hostname: beryl-Latitude-7490chetan
+
+.............................................................................................................
+
+  cat   f1 f2 > f3    --> combine two files content in one file.
+
+ex-           ~$ cat file1.txt file2.txt > file3.txt
+                  o/p-> all content will be in "file3.txt"
+
+
+.............................................................................................................         
+
+    ~$ shutdown -h now   --> shut down the system.
+
+    ~$ reboot            --> reboot system or re-start the system.
+
+........................................................................................................... 
+                          
+
+                       
+          ~$ ifconfig  
+
+          or                             //display all ip addresses and interfaces.
+
+          ~$ ip addr show
+
+
+.............................................................................................................
+
+     last command-  display the information of last user login.
+
+      ~$ last
+       o/p-> 
+
+ 14:50:43 up  1:02,  1 user,  load average: 0.55, 0.29, 0.21
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+beryl    :0       :0               13:48   ?xdm?   2:10   0.01s /usr/lib/gdm3/gdm-x-session --run-scr
+
+
+.............................................................................................................
+
+   id- display "UserId" and "GroupId" of the user.
+
+ ex-
+        ~$ id 
+
+o/p->  uid=1000(beryl) gid=1000(beryl) groups=1000(beryl),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
+   
+.............................................................................................................
+
+   df command
+    • report the system’s disk space usage.
+    • shown in percentage and kilobyte (KB).
+   
+ 
+ syntax :- df -h
+    • df -m displays information on the file system usage in MBs.
+    • df -k displays file system usage in KBs.
+    • df -T shows the file system type in a new column.
+
+ex-       ~$ df -h
+
+.............................................................................................................
+
+   du command 
+
+    • check how much space a file or a directory takes up
+    • identify which part of the system uses the storage excessively.
+    • syntax:- du /home/user/Documents
+
+     ~$ du /home/user/Documents/bye.txt
+          o/p->  4k bye.txt                 //4kb size of "bye.txt"
+............................................................................................................. 
+
+  free command -  it,s used to display used and free memory and  "-h" is used to make readable format of memory information.
+
+
+ex-      ~$ free 
+
+         ~$ free -h                  // readable format of memory.      
+
+.............................................................................................................
+
+localhost
+beryl-Latitude-7490-okk -

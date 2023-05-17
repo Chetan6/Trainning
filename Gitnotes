@@ -1,0 +1,172 @@
+GitHub Notes
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+userName->  git config --global user.name chetan
+                                                   // git config --global user.name 
+
+userMail-> git config --global user.mail ckausi@gmail.com
+
+                                                   //git config --global user.mail
+
+
+  ~$ git config --list         
+
+                                                   //list of all configuration
+
+
+   ~$ git config --global core.editor "atom --wait"
+
+   ~$ git config --global color.ui true
+
+
+    ~$ git help                                    //git help 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ make a folder to work and files.
+
+    folder<Github>
+    files<file1.txt><file2.txt><file3.txt>
+
+
+ step 1- git init                                         //to make git repo
+
+                                                                                       ---->git status
+ step 2- git add --a 
+          or                                              // to be staging area all files
+         git add file1.txt file2.txt file3.txt
+
+                                                                                       ----> git status
+ step 3- git commit -m "msg of updation"                  //commit 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+
+
+
+ to recover old files
+
+
+~$ git checkout <file_name>                              //recover single file 
+
+
+~$ git checkout -f                                       //recover multiple files
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ to check all commits  
+
+
+ ~$ git log                                             //see all commits 
+
+
+ ~$ git log -p -5                                       //see 5 commits recently 
+
+   
+    ~$ git log --author="chetan6"
+   
+    ~$ git help log   or                              //git manual  
+     ~$ man git-log
+
+    
+
+ to see sort status
+
+
+ ~$ git status                                             //see status 
+
+
+ ~$ git status -s                                          //to see short status 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ to be compare file with old one 
+
+
+
+ ~$ git diff                                                //compare working tree with staging area 
+
+
+ ~$ git diff --staged                                       //compare last commit with staging area
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  remove file from staging area if bymistake we added
+
+
+
+ ~$ git rm --cached <file_name>                              //to be out from staging area 
+
+
+ ~$ git rm <file_name>                                       //to be deleted completely file
+
+   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  .gitignore file -  gitignore file is a plain text file that contains a list of all the specified files and folders from the project that Git should ignore and not track.
+
+                      or 
+
+                        to be ignore list of files from Github.
+
+
+         ex-             <.gitignore>{ <file_name>
+                                       <file_name>
+                                       <file_name>
+                                        *.<ext_name>                 //all files with extantion name  " *.txt "
+                                       <directory>/ }                // folder and directory ignore 
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  Branch -  multiple developer can work together and contribute and merge their in distributed form. 
+
+      Bydefault main branch is master.
+
+
+   ~$ git branch left       //create branch left
+   ~$ git branch
+  left
+* master
+
+
+   ~$ git checkout -b right 
+         -->Switched to a new branch 'right'           //create branch right
+
+
+-----------to be switch branch
+
+
+      ~$ git checkout left                  
+             //Switched to branch 'left'
+
+       ~$ git checkout master
+             //Switched to branch 'master'
+
+
+------------------to see all branch name.
+    
+       ~$ git branch                                 //list of branch
+
+    
+
+if other branch is updated then master will take changes and update using updated branch.
+
+
+  ~$ git checkout master
+                                            // to be switch 'master'
+  ~$ git merge left             
+                                            //master is updated using left branch. 
+
+
+   ~$ git remote -v                        //URL to be fetch and push  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  ~$ git clone URL
