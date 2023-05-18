@@ -1,0 +1,40 @@
+
+if condition
+  statement
+  statement
+  ...
+else
+  statement
+  statement
+  ...
+end
+
+
+
+--------------------------------------------------------------
+
+nested-if-else
+
+
+
+    if condition
+           statement
+           statement
+        ...
+    
+    elsif condition
+             statement
+             statement
+        ...
+    
+    elsif condition
+            statement
+            statement
+            ...
+    
+    else
+            statement
+            statement
+            ...
+    
+    end
