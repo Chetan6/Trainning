@@ -1,0 +1,23 @@
+User Inputs in ruby
+-------------------
+
+
+INTEGER->   gets.chomp.to_i
+FLOAT  ->   gets.chomp.to_f
+
+STRING ->   gets.chomp   or
+            gets
+
+
+
+
+User Output
+-----------------
+
+puts ""          #with leaving line 
+
+print ""         #without leaving line 
+
+
+
+-------------------------------------------
