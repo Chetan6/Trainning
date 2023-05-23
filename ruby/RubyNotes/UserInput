@@ -1,5 +1,4 @@
-User Inputs in ruby
--------------------
+look at the userInputs ----------------
 
 
 INTEGER->   gets.chomp.to_i
