@@ -1,0 +1,19 @@
+
+
+Retry => when any exception found during code execution and you have put that error code into 
+          begin..rescue block. it stops execution of code and move into rescue block.
+
+*   if you want to execute same block of code again use "Retry" keyword .
+          this will execute begin block from beginning.
+
+
+
+
+        begin
+
+                raise # an exception
+
+        rescue
+                retry # ⤴
+
+         end
