@@ -1,28 +1,25 @@
-class Vehicle
-      @@name_of
-      
-      def know
-           puts"this is vehicle"
-      end 
+class Animal
+     @@me
+       def demo
+          puts "this is animal class"
+       end 
 end 
 
-class Bike <Vehicle 
-     @@name_of="bike"
-
-     def know 
-          puts"this vehicle is #{@@name_of}"
-     end 
+class Dog<Animal 
+     def demo1
+          puts "this is a dog"
+       end 
 end 
 
-class Car <Vehicle
-      @@name_of="car"
-        
-
-      def know
-        
-        puts"this vehicle is car:"
-      end 
+class Cat <Animal 
+     def demo
+          super()
+          puts "this is a cat"
+       end 
 end 
 
-okk=Car.new
-okk.know
+obj=Cat.new
+obj.demo
+
+obj=Dog.new
+obj.demo
