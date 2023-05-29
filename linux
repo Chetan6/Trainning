@@ -1,22 +1,5 @@
-BASIC COMMANDS OF LINUX
---------------------------------------------------------------------------------------------------------
 
 linux is an open source os.
-
-cmds-
-------------------------------------------------------------------------------------------------
-
-(1)   ls-    used to list files and directories the content of your current working directory. 
-
-      ls -R  ->  list all the files in subdirectories.
-      ls -a  ->  show hidden files in addition to visible ones.
-      ls -lh ->  show the file size in easily readable formats such as mb ,gb and tb.
-
-
-      ex-   $ ls
-            o/p ->  download       desktop    me 
-                    document       bin
-.....................................................................................
 
 
                          unix-> it,s foundation of linux .
@@ -28,18 +11,112 @@ cmds-
 
                           =  window focused on gui and linux focus on cli.
 
+BASIC COMMANDS OF LINUX
 
-................................................................................
+========================================================================================================================================================================================
 
-(2)    pwd-       (print working directory)
+ 1- . sudo command
+    • require administrative or root permissions.	
+    • sudo allows programs to be executed as a super user
+  
+  • syntax :- sudo (command)
+
+    • -k or –reset-timestamp invalidates the timestamp file.
+    • -g or –group=group runs commands as a specified group name or ID.
+    • -h option causes sudo to print a usage message and exit. 
+   
+ • APT :- Advance package tool
+   
+     • syntax :- :~$ sudo apt update                                            (only make updated list , installation not done)
+     • syntax :- ~$ sudo apt install tree.                                        (installing tree using sudo apt)
+    • syntax :-  ~$ sudo apt upgrade.                                            (for installing all updated list in one go.)
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+      sudo su -   grant root privilages.
+
+  two ways to access admin or root user
+                      (1)->     su- it is used to make terminal root user or admin.
+                      (2)->     or we can use sudo before command.  
+
+         ~$ sudo su
+                 --> password
+
+           o/p-> # root user
+
+
+
+
+
+     apt-get update --->  update packages list(URL's).
+
+
+ex-         ~$ sudo su                             //to be make root user or admin terminal.
+            ~$ apt-get update
+
+         or 
+
+             ~$ sudo apt update                    //only this line will act as a root user or admin.
+
+              o/p-> update kind of playstore......
+
+...............................................................................................................
+
+    apt-get upgrade --->  update all installed softwares.
+
+
+ex-         ~$ sudo su                             //to be make root user or admin terminal.
+            ~$ apt-get upgrade
+
+         or 
+
+             ~$ sudo apt upgrade                    //only this line will act as a root user or admin.
+
+              o/p-> update all installed software..........
+
+...............................................................................................................
+
+     apt-get install gedit ---> install a particular software.
+
+
+              apt install <software>
+
+
+ex-         ~$ sudo su                             //to be make root user or admin terminal.
+            ~$ apt install gedit
+
+         or 
+
+             ~$ sudo apt install gedit                    //only this line will act as a root user or admin.
+
+              o/p-> a particular software will be install.
+
+    
+
+
+
+========================================================================================================================================================================================
+
+ 2-   pwd command
+    
+    • find the path of your current working directory
+
+         pwd-       (print working directory)
                   pwd is used to display location of current working directory.
  
        ex-             $ pwd
                       o/p-> /home/beryl  
-................................................................................
 
 
- (3)   cd -       change directory 
+    • syntax:- ~$ pwd
+
+========================================================================================================================================================================================
+3-  cd command
+   
+    • navigate through the Linux files and directories / change directory 
 
 
               cd <folder_name>
@@ -53,10 +130,113 @@ cmds-
            *      ~$ cd ..                            (/home/beryl/download)
                   o/p-> back folder                   (/home/beryl)
 
-....................................................................................
 
-(4)    mkdir - it,s used to create new directory under any directory 
-             
+
+     • syntax:- cd photos
+
+
+========================================================================================================================================================================================
+4. ls command
+    
+   • ls command lists files and directories within a system
+   or	
+      used to list files and directories the content of your current working directory. 
+
+      ls -R  ->  list all the files in subdirectories.
+      ls -a  ->  show hidden files in addition to visible ones.
+      ls -lh ->  show the file size in easily readable formats such as mb ,gb and tb.
+
+
+      
+  syntax:- ls /home/username/Documents
+
+      ex-   $ ls
+            o/p ->  download       desktop    me 
+                    document       bin
+========================================================================================================================================================================================
+5. cat command
+    • lists, combines, and writes file content to the standard output.  or 
+           cat command is used to show file content on terminal.
+   
+ syntax :- cat filename.txt.
+    
+    • cat > filename.txt creates a new file.
+    • cat filename1.txt filename2.txt > filename3.txt merges filename1.txt and filename2.txt and stores the output in filename3.txt.
+    • tac filename.txt displays content in reverse order.
+
+      
+
+
+             cat <file_name>
+
+ex-         ~$ cat demo.txt
+
+             o/p - content of demo.txt will be open on terminal. 
+
+========================================================================================================================================================================================
+
+6. cp command
+    • copy files or directories and their content    or     cp command is used to copy a file or directory. 
+    • To copy one file from the current directory to another. 
+      syntax:- cp filename.txt /home/username/Documents
+      
+    • copy the content of a file to a new file in the same directory. 
+      syntax:- cp filename1.txt filename2.txt
+      
+    • To copy an entire directory. 
+      syntax:- cp -R /home/username/Documents /home/username/Documents_backup    (Recursive coping of directory files into another )
+
+NOTE:- in R if dest_dir present make sour_dir as subdirectory in dest_dir
+	if dest_dir not present then make dest_dir and copy the files of sour_dir.
+
+	-i(interactive) , -b(backup) , -f(force)
+
+
+
+    • scp (secure copy):- to copy files between the servers in a secure way.
+    1. scp is known for its simplicity, security and pre-installed availability.
+    2. scp –P port: Specifies the port to connect on the remote host.
+    3. scp –p: Preserves modification times, access times, and modes from the original file.
+    4. scp –q: Disables the progress meter.
+    5. scp –r: Recursively copy entire directories.
+    6. scp –S: program: Name of program to use for the encrypted connection. The program must understand ssh(1) options.
+      
+
+                    
+                  cp <existing_file> <new_file>/
+
+ex-                ~$ demo1.txt  demo2.txt  demo3.txt
+
+                   ~$ cp demo1.txt chetan/
+
+        o/p->            chetan/demo1.txt
+                           demo1.txt will copy inside chetan folder also
+
+
+========================================================================================================================================================================================
+7. mv command
+    • move and rename files and directories.    or      mv command is used to move a file or a directory from one location to another location.
+    
+ syntax:- mv filename.txt /home/username/Documents.
+    • rename file syntax:- mv old_filename.txt new_filename.txt
+
+
+               mv  <file>  <dir_path>
+
+ex-             ~$ mv demo.txt how
+                 o/p-> 
+                           (ls)- how/demo.txt
+                            demo.txt will move in how folder or dir.
+
+
+=========================================================================================================================================================================================
+	
+8. mkdir command
+    • create one or multiple directories at once and set permissions for each of them.
+    •it,s used to create new directory under any directory  
+
+     syntax:- mkdir Music
+	       
 
                mkdir <directory_name>
        ex-   
@@ -65,10 +245,13 @@ cmds-
 
              (ls)-  document   downloads  hlw
                       create hlw directory 
+=========================================================================================================================================================================================
 
-...................................................................................
+9. rmdir command
+    • permanently delete an empty directory.
+    •  it is used to delete directory.
 
-(5)    rmdir - it is used to delete directory.
+ syntax:- rmdir -p mydir/personal1
 
 
             rmdir <directory_name>
@@ -78,36 +261,14 @@ cmds-
 
              (ls) -document   download
               hlw directory will delete
-
-....................................................................................                                     
-
-(6)     touch command-   touch command is used to create empty file and we can create multiple empty files using once.
-
-
-             touch <file>
-             touch <file> <file>...
-ex-
-           ~$ touch  demo.txt  test.txt  hlw.txt
-            o/p->   
-                     (ls)    demo.txt   test.txt   hlw.txt
-
-
-..........................................................................................................
-
-(7)       cat command-  cat command is used to show file content on terminal.
-
-
-             cat <file_name>
-
-ex-         ~$ cat demo.txt
-
-             o/p - content of demo.txt will be open on terminal. 
-
-
-..........................................................................................................
-
-(8)        rm command-    rm command is used to remove a file.
-
+=========================================================================================================================================================================================
+      
+10. rm command
+    • delete files within a directory.
+    • can’t undo it.   or     rm command is used to remove a file.
+    
+syntax:- rm filename
+    • multi file syntax:- rm filename1 filename2 filename
                   
                  rm <file>
                  rm <file> <file> ....
@@ -119,46 +280,294 @@ ex-             ~$  test.txt   hlw.txt  demo.txt
       o/p->  
                       (ls)      test.txt   hlw.txt
 
+
+
+=========================================================================================================================================================================================
+
+11. touch command
+    • allows you to create an empty file or generate and modify a timestamp in the Linux command line.
+    • touch command is used to create empty file and we can create multiple empty files using once.
+
+ syntax:- touch /home/username/Documents/Web.html
+      Various touch commands :
+      
+      (a) touch -a – It is used for change the access time of a file.
+      (b) touch -m – It is used for only change the modification time of a file.
+      (c) touch -r – It is used for update time of file with reference to other mentioned file.
+      
+Example :
+      touch -r demo.txt Demo.txt
+      or
+      touch Demo.txt -r demo.txt
+
+	(d) touch -t – It is used to change the modification and access time of a file by determining a specified 		          		time to it.
+		Syntax :
+		touch  -t YYYYMMDDhhmm.ss
+
+
+             touch <file>
+             touch <file> <file>...
+ex-
+           ~$ touch  demo.txt  test.txt  hlw.txt
+            o/p->   
+                     (ls)    demo.txt   test.txt   hlw.txt
+=========================================================================================================================================================================================
+	
+12. locate command
+    • find a file in the database system.
+    • -i argument will turn off case sensitivity.
+    • look for content that contains two or more words. 
+     
+    syntax:- locate -i school*note
+
+               ~$ locate -i rubyNotes
+                    o/p-->  /home/beryl/Desktop/Trainning/ruby/RubyNotes
+
+=========================================================================================================================================================================================
+	
+13. find command
+    • search for files within a specific directory and perform subsequent operations
+    • syntax:- find /home -name notes.txt
+    • syntax :-  find . -name “poe*”
+    • here “.” is use for current directory  where to find files  , “-name” is use for searching by name ,  and “poe*” shows file name 	starting with poe and end with any number 
+ of character.
+
+      ~$ find . -name RubyNotes
+                o/p-->./Desktop/Trainning/ruby/RubyNotes
+
+
+=========================================================================================================================================================================================
+	
+14. grep command
+    • find a word by searching through all the texts in a specific file.
+    • prints all lines that contain the specific pattern.
+    • syntax :- grep -n  “blue”  notepad.txt     [- n for numbers]
+      
+    • -vi -> when we want to drop the line matching with search.  
+      Syntax:- grep -vi “the” poems.txt
+      
+    • Word length more then 6 .  
+      syntax :- grep -E “\w{6,}” poems.txt
+
+=========================================================================================================================================================================================
+
+15. df command
+    • report the system’s disk space usage.
+    • shown in percentage and kilobyte (KB).
+    • syntax :- df -h
+    • df -m displays information on the file system usage in MBs.
+    • df -k displays file system usage in KBs.
+    • df -T shows the file system type in a new column.
+
+ex-       ~$ df -h
+
+
+ 
+=========================================================================================================================================================================================
+	
+16. du command
+    • check how much space a file or a directory takes up
+    • identify which part of the system uses the storage excessively.
+    • syntax:- du /home/user/Documents
+
+     ~$ du /home/user/Documents/bye.txt
+          o/p->  4k bye.txt                 //4kb size of "bye.txt"
+
+=========================================================================================================================================================================================
+	
+17. head command
+    • view the first ten lines of a text.
+    • syntax :- head note.txt
+    • customized number of lines syntax:- head -n 5 filename.txt
+
+=========================================================================================================================================================================================
+	
+18. tail command
+    • last ten lines of a file.
+    • check whether a file has new data or to read error messages.
+    • syntax:- tail -n colors.txt
+
+=========================================================================================================================================================================================
+	
+19. diff command
+    • compares two contents of a file line by line.
+    • it will display the parts that do not match.
+    • syntax:- diff note.txt note_update.txt
+
+=========================================================================================================================================================================================
+	
+20. tar command
+    • archives multiple files into a TAR file (similar to zip file)
+    • syntax :- tar -cvf newarchive.tar /home/user/Documents
+      c = tells linux to create a new archive file.
+      v = to verbosely display files that have been processed.
+      f = stands for the file name.  
+    • -x extracts a file.
+    • -t lists the content of a file.
+    • -u archives and adds to an existing archive file.
+
+	Compress files:- 1. tar caf myfiles.tar.gz  file_path.
+			  2. tar caf myfiles.tar.bz2  file_path.
+
+			 Extract :- tar -xf  file_name
+
+                        ~$ tar -cf oye.tar hlw.txt bye.txt this.txt
+                        ~$ ls 
+
+a          Downloads                               here.tar      latest.zip  me.zip  oye.tar   snap    Templates  Videos
+bye.txt    examples.desktop                        hlw.txt       lifo.txt    Music   Pictures  ss      this.txt
+
+
+                        
+=========================================================================================================================================================================================
+
+
+21. chmod command
+    • modifies a file or directory’s read, write, and execute permissions.
+    • three user classes – owner, group member, and others.
+    • To allow group members and others to read, write, and execute the file, syntax :- chmod 777 note.txt
+      
+    • note:- -rwxrwxrwx permission type, whose numeric value is 777.
+    • symbolic permission :- (+) add permission , (-) removes permission , (=) add permission but remove others.
+      U = user , g = Group , o = others , a = all.
+      Eg:- u+rwx , g=r , o – rwx.
+      Syntax:- chmod u+r,g+w,o+x file_name
+
+
+      chmod -     change directory permission.
+
+
+       permission-
+
+              read     -r                   (+)  add permission
+              write    -w                   (-)  remove permission 
+              execute  -x
+
+
+               press :   ~$ ls -l      --> to see detailed information of a file.
+          
+                chmod  permission(r or w or x)  <file>
+
+ex-         ~$ chmod -w bye.txt                      //remove the permission of write from file "bye.txt"
+
+             ~$ chmod -wx bye.txt                    //remove the permission of write and excute from file "bye.txt"
+
+                -->must be in user more not root mode.
+	
+=========================================================================================================================================================================================
+
+22. chown command
+    • change the ownership of a file, directory, or symbolic link to a specified username.
+    • syntax:- chown linuxuser2 filename.txt
+
+=========================================================================================================================================================================================
+	
+23. jobs command
+    • Display all the running processes along with their statuses
+    • only available in csh, bash, tcsh, and ksh shells.
+
+     syntax:- jobs [options] jobID
+    • -l lists process IDs along with their information.
+    • -n lists jobs whose statuses have changed since the last notification.
+    • -p lists process IDs only.
+
+=========================================================================================================================================================================================
+	
+24. kill command
+    • To terminate an unresponsive program manually.
+    • To kill a program, you must know its process identification number (PID)
+    • don’t know the PID. syntax:- ps ux
+    • syntax :- kill SIGKILL 63773
+    • SIGTERM requests a program to stop running and gives it some time to save all of its progress. The system will use this by default 	
+if you don’t specify the signal when entering the kill command.
+    • SIGKILL forces programs to stop, and you will lose unsaved progress.
+
+=========================================================================================================================================================================================
+	
+25. ping command
+    • checking whether a network or a server is reachable.
+    • used to troubleshoot various connectivity issues.
+    • syntax :- ping google.com
+
+=========================================================================================================================================================================================
+	
+26. wget command
+    • download files from the internet
+    • works in the background without hindering other running processes.
+    • retrieves files using HTTP, HTTPS, and FTP protocols.
+    • eg:- wget https://wordpress.org/latest.zip
+
+=========================================================================================================================================================================================
+	
+27. uname command
+    • print detailed information about your Linux system and hardware.
+    • syntax :- uname [option]
+    • -a prints all the system information.
+    • -s prints the kernel name.
+    • -n prints the system’s node hostname.
+      
+=====================================================================================================================================================================================	
+28. top command
+    • Display all the running processes and a dynamic real-time view of the current system.
+    • it sums up the resource utilization, from CPU to memory usage.
+    • syntax:- top
+========================================================================================================================================================================================      
+29. history command
+    • list up to 500 previously executed commands.
+    • reuse them without re-entering.
+    • syntax:- history [option]
+    • -c clears the complete history list.
+    • -d offset deletes the history entry at the OFFSET position.
+    • -a appends history lines.
+=======================================================================================================================================================================================	
+30. man command
+    • provides a user manual of any commands or utilities you can run in Terminal, including the name, description, and options.
+    • syntax:- man [command_name]
+
+========================================================================================================================================================================================
+
+
+
+------------------------------------------------------------------------------------------------
+
+(1)
+.....................................................................................
+
+
+
+
+................................................................................
+
+................................................................................
+
+....................................................................................
+
+(4)   
+
+...................................................................................
+
+
+....................................................................................                                     
+
+(6)    
+
+
 ..........................................................................................................
 
-(9)         cp command -   cp command is used to copy a file or directory.
+(7) 
 
-             
-                  cp <existing_file> <new_file>/
+..........................................................................................................
+..........................................................................................................
 
-ex-                ~$ demo1.txt  demo2.txt  demo3.txt
-
-                   ~$ cp demo1.txt chetan/
-
-        o/p->            chetan/demo1.txt
-                           demo1.txt will copy inside chetan folder also
-
-
+(9) 
 ........................................................................................................
 
 
-(10)         mv command -   mv command is used to move a file or a directory from one location to another location.
-
-
-               mv  <file>  <dir_path>
-
-ex-             ~$ mv demo.txt how
-                 o/p-> 
-                           (ls)- how/demo.txt
-                            demo.txt will move in how folder or dir.
+(10)       
 
 ........................................................................................................
 
-(11)         rename command -    rename command is used to rename files.It is useful for renaming a large group of files.
-
-                or       Rename a file.
-
-                 
-                 mv <old_file> <new_file>
-
-ex-             ~$ mv bye.txt love.txt            //bye.txt          
-                   o/p-> love.txt
-
+(11)        
 ................................................................................................................
 (18)         id command -  id command is used to display user id (UID) and group id(GID).
 
@@ -243,18 +652,6 @@ ex-         ~$ vim demo.txt
                   wq-> quit with save file.
 
 ................................................................................................................
-
-      sudo su -   grant root privilages.
-
-  two ways to access admin or root user
-                      (1)->     su- it is used to make terminal root user or admin.
-                      (2)->     or we can use sudo before command.  
-
-         ~$ sudo su
-                 --> password
-
-           o/p-> # root user
-
 ................................................................................................................
 
 
@@ -296,25 +693,6 @@ ex->
 
 ................................................................................................................
 
-      chmod -     change directory permission.
-
-
-       permission-
-
-              read     -r                   (+)  add permission
-              write    -w                   (-)  remove permission 
-              execute  -x
-
-
-               press :   ~$ ls -l      --> to see detailed information of a file.
-          
-                chmod  permission(r or w or x)  <file>
-
-ex-         ~$ chmod -w bye.txt                      //remove the permission of write from file "bye.txt"
-
-             ~$ chmod -wx bye.txt                    //remove the permission of write and excute from file "bye.txt"
-
-                -->must be in user more not root mode.
 
 ................................................................................................................
 
@@ -357,50 +735,6 @@ ex-        ~$ bash bye.txt
               o/p-> beryl system pvt ltd
 
 ...............................................................................................................
-
-     apt-get update --->  update packages list(URL's).
-
-
-ex-         ~$ sudo su                             //to be make root user or admin terminal.
-            ~$ apt-get update
-
-         or 
-
-             ~$ sudo apt update                    //only this line will act as a root user or admin.
-
-              o/p-> update kind of playstore......
-
-...............................................................................................................
-
-    apt-get upgrade --->  update all installed softwares.
-
-
-ex-         ~$ sudo su                             //to be make root user or admin terminal.
-            ~$ apt-get upgrade
-
-         or 
-
-             ~$ sudo apt upgrade                    //only this line will act as a root user or admin.
-
-              o/p-> update all installed software..........
-
-...............................................................................................................
-
-     apt-get install gedit ---> install a particular software.
-
-
-              apt install <software>
-
-
-ex-         ~$ sudo su                             //to be make root user or admin terminal.
-            ~$ apt install gedit
-
-         or 
-
-             ~$ sudo apt install gedit                    //only this line will act as a root user or admin.
-
-              o/p-> a particular software will be install.
-
 ...............................................................................................................
 
    top-   showing linux processes.   or    Display all running processes.
@@ -528,29 +862,6 @@ beryl    :0       :0               13:48   ?xdm?   2:10   0.01s /usr/lib/gdm3/gd
 o/p->  uid=1000(beryl) gid=1000(beryl) groups=1000(beryl),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
    
 .............................................................................................................
-
-   df command
-    • report the system’s disk space usage.
-    • shown in percentage and kilobyte (KB).
-   
- 
- syntax :- df -h
-    • df -m displays information on the file system usage in MBs.
-    • df -k displays file system usage in KBs.
-    • df -T shows the file system type in a new column.
-
-ex-       ~$ df -h
-
-.............................................................................................................
-
-   du command 
-
-    • check how much space a file or a directory takes up
-    • identify which part of the system uses the storage excessively.
-    • syntax:- du /home/user/Documents
-
-     ~$ du /home/user/Documents/bye.txt
-          o/p->  4k bye.txt                 //4kb size of "bye.txt"
 ............................................................................................................. 
 
   free command -  it,s used to display used and free memory and  "-h" is used to make readable format of memory information.
@@ -559,6 +870,8 @@ ex-       ~$ df -h
 ex-      ~$ free 
 
          ~$ free -h                  // readable format of memory.      
+
+.............................................................................................................
 
 .............................................................................................................
 

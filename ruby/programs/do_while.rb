@@ -1,8 +1,10 @@
-a=0
-print"enter your destination"
-b=gets.chomp.to_i
+yes=catch(:me) do
+(1..5).each do |a|
+       puts a
+       if a==3
+           throw :me 
+       end 
+end 
+end 
 
-begin
-    print "\t#{a}"
-    a=a+2;
-end while a<b 
+puts yes
