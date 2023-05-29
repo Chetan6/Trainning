@@ -1,0 +1,11 @@
+what is ruby?
+
+ 
+1-   ruby is server side scripting language.
+2-   ruby is interpreted language.
+3-   it runs on a variety of plateform.   
+4-   ruby also known as a pure object oriented language.
+5-   everything in ruby is instance of some class.
+6-   class of an object in ruby decided at run time.
+
+---------------------------------------------------------
