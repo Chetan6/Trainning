@@ -1,0 +1,20 @@
+Given a sorted array of numbers, remove any numbers that are divisible by 13. Return the amended array.
+Create a function that takes in a two-dimensional array and returns the number of sub-arrays with only identical elements.
+Create a function that takes a string and returns the middle character(s). If the word's length is odd, return the middle character. If the word's length is even, return the middle two characters.
+Create a function that takes two strings and returns either true or false depending on whether they're anagrams or not.
+Given an integer array, transform it into a mirror.
+An array is special if every even index contains an even number and every odd index contains an odd number. Create a function that returns true if an array is special, and false otherwise.
+Create a function that returns the index of the first vowel in a string.
+Create a function that takes two parameters (start, stop), and returns the sum of all even numbers in the range.
+Create a function that takes an array of numbers between 1 and 10 (excluding one number) and returns the missing number.
+Create a function that, given a number, returns the corresponding value of that index in the Fibonacci series. e.g. fibonacci(7) ➞ 21
+
+
+
+
+
+
+#Here are few programs which you need to prepare in ruby
+
+
+1,3,4,10,9,6

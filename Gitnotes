@@ -1,5 +1,5 @@
 GitHub Notes
-
+dffskf   
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 userName->  git config --global user.name chetan
@@ -14,7 +14,7 @@ userMail-> git config --global user.mail ckausi@gmail.com
 
                                                    //list of all configuration
 
-
+fdsdfds
    ~$ git config --global core.editor "atom --wait"
 
    ~$ git config --global color.ui true
