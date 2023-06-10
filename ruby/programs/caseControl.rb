@@ -1,3 +1,5 @@
+
+
 print "enter the marks"
 marks=gets.chomp.to_i
 

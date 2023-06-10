@@ -62,3 +62,8 @@ numbers=[12,21,31,44,52,69]
 
  puts "& operator:", (even & odd)
  puts "| operator:", (even | odd)
+
+
+ #creating a hash table 
+
+ 

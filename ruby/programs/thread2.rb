@@ -20,7 +20,7 @@ end
 x1=Thread.new{first()}
 x2=Thread.new{second()}
 
-Thread.kill(x1)
+#Thread.kill(x1)
 x1.join()
 x2.join()
 

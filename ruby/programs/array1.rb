@@ -1,5 +1,4 @@
-a=Array.new(12,23,34,"hello")
-puts a 
+
 
 #b=Array.new(5)
 

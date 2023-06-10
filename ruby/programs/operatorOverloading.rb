@@ -16,6 +16,7 @@ class Tester
         return @num**obj
     end
 end
+
 a=Tester.new(5)
 puts a + 5
 puts a * 3

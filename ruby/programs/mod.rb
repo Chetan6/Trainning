@@ -8,5 +8,3 @@ module A
 end 
 
 
-obj=A::Bye.new 
-obj.fun

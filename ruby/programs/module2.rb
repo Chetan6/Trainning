@@ -1,5 +1,5 @@
 module A 
-  $okk=100;
+  #okk=100;
 
     def A.demo
         puts 'this is demo method of module A'
@@ -10,7 +10,7 @@ module A
    end 
 end 
 
-puts A::okk
+#puts A::okk
 
 A.hlw 
 A.demo

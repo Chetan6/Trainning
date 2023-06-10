@@ -15,4 +15,4 @@ end
 obj=B.new 
 obj.demo           #include calling of b
 
-C.demo
+C.demo             #call like class method 
