@@ -1,9 +1,9 @@
-a=10
+print "enter your age "
+age=gets.chomp.to_i
 
-if a>12
-    puts'a is greater than 12'
-    
-else
-    puts'a is less than 12'
-    
-end    
+if age>17
+    puts "you are eligible to give vote:"
+
+else 
+    puts "you are under-age:"
+end 

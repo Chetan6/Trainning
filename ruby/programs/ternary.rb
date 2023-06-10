@@ -1,6 +1,6 @@
-print 'enter your age :'
+print "enter your age "
 age=gets.chomp.to_i
 
-ok=(age>17?"adult":"minor")
+result= age>17?"adult":"child"
+    puts result
 
-puts ok 

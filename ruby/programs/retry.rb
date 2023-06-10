@@ -1,8 +1,18 @@
-begin
-    puts "this is before error statement "
-    raise "this is raise statement "
-    puts "this is after error statement "
+def excp 
+    begin   
+          puts "good morning to all :be ready to face Exception: "
 
-rescue Exception=> e
-      retry
+          raise "error occur :"
+
+          puts "thank you this is after exception:"
+
+    rescue Exception=>e  
+          
+             puts "ok now we  rescued...."
+             puts e.message
+             
+             retry
+    end 
 end 
+
+excp 

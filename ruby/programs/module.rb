@@ -1,18 +1,27 @@
-module A 
-     def demo 
-         puts 'this is method of module :'
-     end 
+module A  
+    def first 
+          puts "this is first method inside module A:"
+    end 
 end 
 
-class B
-    include A 
+module B  
+    def second
+        puts "this is second method inside module B:"
+    end 
 end 
 
 class C
-   extend A 
+    include A 
+    include B   
+
+    def self.third 
+           puts "this is third method inside class:"
+    end 
 end 
 
-obj=B.new 
-obj.demo           #include calling of b
 
-C.demo             #call like class method 
+obj=C.new 
+C.third 
+
+obj.second 
+obj.first

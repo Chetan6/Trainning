@@ -1,9 +1,5 @@
-def hello (fir="ruby" ,sec="java core")
-
-       puts fir 
-       puts sec 
+def hello
+     puts "this is my first method :"
 end 
 
- hello("chetan","manish")
- hello("chinu")
- hello
+hello

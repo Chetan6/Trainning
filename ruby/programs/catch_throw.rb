@@ -1,9 +1,40 @@
-# Ruby Program of Catch and Throw Exception
-gfg = catch(:divide) do
-    # a code block of catch similar to begin
-      number = rand(2)
-      throw :divide if number == 0
-      number # set gfg = number if
-      # no exception is thrown
-  end
-  puts gfg
+print 'enter your age '
+age=gets.chomp.to_i 
+
+if age>100 or age<1
+    throw :stop  
+    
+else
+    puts "person is #{age} yrs old."
+end 
+
+catch (:stop) do
+    puts "impossible! this given age:"
+end 
+
+
+
+
+
+
+
+=begin   
+
+li=[10,23,2,3,54,76,12,34,56,54,3,32,31]
+
+okk=li.length-1
+
+catch(:stop) do
+    while okk>0
+          for i in 0..okk
+               puts li[i]
+               
+               if i>6
+                  throw :stop
+               end 
+           end
+           okk-=1 
+    end 
+end
+
+=end 

@@ -1,10 +1,25 @@
-me =Hash.new 
+=begin   
+me ={
+    'name' =>'chetan kaushik',
+    'city' =>'mathura',
+    'age'  =>'22',
+    'college' =>'RATM',
+    'job'  =>'Software Trainee Engineer'
+}
 
-me["name"]="chetan"
-me["age"]="22"
-me["city"]="mathura"
+puts me["name"]  
+puts me["job"]  
+
+=end 
 
 
-puts me["name"]
-puts me["age"]
-puts me["city"]
+me ={
+    name :'chetan kaushik',
+    city :'mathura',
+    age  :'22',
+    college :'RATM',
+    job  :'Software Trainee Engineer'
+}
+
+puts me["name"]  
+puts me["job"]

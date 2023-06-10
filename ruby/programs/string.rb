@@ -1,8 +1,16 @@
-my_name ="chetan kaushik"
-puts my_name
-puts my_name.capitalize
-puts my_name.upcase
-puts my_name.downcase
-puts my_name.reverse
-puts my_name.length
-puts my_name[1..4]
+=begin
+name=String.new("oh my god")
+puts name.upcase
+=end
+
+#wap name and surname and reverse them
+
+print"enter your name "
+Name=gets.chomp
+
+print"enter your surName "
+surName=gets.chomp
+
+puts Name + surName
+
+puts "#{surName.reverse}\t#{Name.reverse}"

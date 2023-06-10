@@ -1,20 +1,15 @@
-def ensure_ex 
+def fun  
+    begin   
+               puts "this is before exception :"
+        
+              raise     "error occur:"
 
-    begin 
-        puts "welcome to everyone"
-
-       # raise "error occured"
-
-       puts "thank you"
-
-    rescue Exception=>e 
-        puts "okk ! No problem #{e}"
-
-    ensure  
-        puts "this is ensure block "
-
+    rescue 
+              puts "error catched by me "
+               
+    ensure   
+                puts "it,s ensure method "
     end 
 end 
 
-
-ensure_ex
+fun()
