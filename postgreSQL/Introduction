@@ -1,0 +1,20 @@
+Introduction-->
+
+PostgreSQL (pronounced as post-gress-Q-L) is an open source relational database management system (DBMS) developed by a worldwide team of volunteers. PostgreSQL is not controlled by any corporation or other private entity and the source code is available free of charge.
+
+=========================================================================================================
+Types of SQL Commands
+There are five types of SQL commands: DDL, DML, DCL, TCL, and DQL.
+
+
+DDL :   create,drop,alter,truncate
+
+DML :   insert,update,delete
+
+DCL :   grant,revoke
+
+TCL :   commit,rollback,savepoint
+
+DQL :   select
+
+==========================================================================================================
