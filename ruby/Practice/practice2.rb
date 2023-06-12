@@ -78,3 +78,28 @@ puts puts
 
 puts "now all superHeros :\n\n"
 superHeros.each {|superHero| puts superHero}
+
+#each with index
+
+superHeros.each_with_index{|superHero ,index|
+      puts "superHeros[#{index}] :\t#{superHero} "
+}
+
+#to be each charecter 
+
+statement="he is a software developer"
+statement.each_char{ |sw|
+      puts sw
+}
+
+puts puts 
+puts statement.chars
+
+
+#map --> map is used to make a new array 
+
+puts puts 
+hero=superHeros.map{|su|  
+              su.upcase()
+}
+
